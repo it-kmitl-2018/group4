@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Trade Service Message Standard:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Trade_Service_Message_Standard_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Trade Service Message Standard/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Trade Service Message Standard" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
