@@ -2,6 +2,8 @@
 nbproject/private/
 build/
 nbbuild/
+bin/
+out/
 
 # Eclipse
 .classpath
@@ -15,3 +17,9 @@ nbbuild/
 
 # Mac
 .DS_Store
+
+# Package Files
+*.class
+*.jar
+*.war
+*.ear
