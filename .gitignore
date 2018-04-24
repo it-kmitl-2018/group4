@@ -23,3 +23,6 @@ out/
 *.jar
 *.war
 *.ear
+
+# Gradle generate file
+.gradle/
