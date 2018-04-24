@@ -1,6 +1,10 @@
 group 'com.example'
 version '1.0-SNAPSHOT'
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.7' //version required
+}
+
 buildscript {
     repositories {
         mavenCentral()
