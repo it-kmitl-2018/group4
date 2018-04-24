@@ -1,4 +1,4 @@
-package com.project.group4;
+package taxinvoice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class Group4ApplicationTests {
+public class TaxInvoiceApplicationTests {
 
 	@Test
 	public void contextLoads() {

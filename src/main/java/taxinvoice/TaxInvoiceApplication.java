@@ -1,12 +1,12 @@
-package com.project.group4;
+package taxinvoice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Group4Application {
+public class TaxInvoiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Group4Application.class, args);
+		SpringApplication.run(TaxInvoiceApplication.class, args);
 	}
 }
