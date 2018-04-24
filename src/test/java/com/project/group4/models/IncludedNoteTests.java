@@ -1,11 +1,11 @@
-package taxinvoice.models;
+package com.project.group4.models;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class IncludedNoteTest {
+public class IncludedNoteTests {
 
     private IncludedNote includedNote;
 

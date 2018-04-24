@@ -1,4 +1,4 @@
-package taxinvoice;
+package com.project.group4;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

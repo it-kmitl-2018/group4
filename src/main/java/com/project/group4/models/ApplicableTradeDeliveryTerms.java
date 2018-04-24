@@ -1,4 +1,4 @@
-package taxinvoice.models;
+package com.project.group4.models;
 
 public class ApplicableTradeDeliveryTerms {
 

@@ -1,6 +1,8 @@
-package taxinvoice.models;
+package com.project.group4.models;
 
 public class IncludedNote {
+
+    //TODO : constructor, attribute, method because wait for requirement.
 
     private String subject;
     private String content;

@@ -1,11 +1,11 @@
-package taxinvoice.models;
+package com.project.group4.models;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ApplicableTradeDeliveryTermsTest {
+public class ApplicableTradeDeliveryTermsTests {
 
     private ApplicableTradeDeliveryTerms applicableTradeDeliveryTerms;
 
