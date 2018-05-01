@@ -19,10 +19,10 @@ public class JsonConverterTest {
 
     private String jsonString = "{\r\n  \"strings\" : [ \"a\", \"b\", \"c\" ]\r\n}";
 
-//    @Test
-//    public void crateJsonStringTest() {
-//        assertEquals(jsonString, JsonConverter.crateJsonString(new TestJson()));
-//    }
+    @Test
+    public void crateJsonStringTest() {
+        assertEquals(jsonString, JsonConverter.crateJsonString(new TestJson()));
+    }
 
     @Test
     public void crateJsonFileTest() {
