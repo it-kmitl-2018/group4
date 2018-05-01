@@ -35,6 +35,7 @@ public class TradeContactTest {
         tradeContact.setDepartmentName("Department Name");
         tradeContact.setEmail("email@email.com");
         tradeContact.setTelephoneNumber("0871233456");
+
         assertEquals("PersonName", tradeContact.getPersonName());
         assertEquals("Department Name", tradeContact.getDepartmentName());
         assertEquals("email@email.com", tradeContact.getEmail());
