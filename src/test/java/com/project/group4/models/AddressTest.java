@@ -49,6 +49,7 @@ public class AddressTest {
         address.setDistrict("District");
         address.setProvince("Province");
         address.setCountry("Country");
+        
         assertEquals("4324", address.getPostCode());
         assertEquals("Building name", address.getBuildingName());
         assertEquals("23456755", address.getBuildingNumber());
