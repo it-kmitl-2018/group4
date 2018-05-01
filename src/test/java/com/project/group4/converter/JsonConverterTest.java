@@ -17,7 +17,14 @@ public class JsonConverterTest {
         private List<String> strings = Arrays.asList("a", "b", "c");
     }
 
-    private String jsonString = "{\r\n  \"strings\" : [ \"a\", \"b\", \"c\" ]\r\n}";
+    private String jsonString =
+            "{\n" +
+            "    \"strings\" : [\n" +
+            "        \"a\",\n" +
+            "        \"b\",\n" +
+            "        \"c\"\n" +
+            "    ]\n" +
+            "}";
 
     @Test
     public void crateJsonStringTest() {
