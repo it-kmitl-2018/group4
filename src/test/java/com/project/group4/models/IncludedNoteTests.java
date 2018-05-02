@@ -20,24 +20,17 @@ public class IncludedNoteTests {
     }
 
     @Test
-    public void subjectNullTest() {
+    public void NullTest() {
         assertNull(includedNote.getSubject());
-    }
-
-    @Test
-    public void subjectGetSetTest() {
-        includedNote.setSubject("หมายเหตุ");
-        assertEquals("หมายเหตุ", includedNote.getSubject());
-    }
-
-    @Test
-    public void contentNullTest() {
         assertNull(includedNote.getContent());
     }
 
     @Test
-    public void contentGetSetTest() {
-        includedNote.setContent("ใช้ในงานราชการเท่านั้น");
-        assertEquals("ใช้ในงานราชการเท่านั้น", includedNote.getContent());
+    public void GetterSetterTest() {
+        includedNote.setSubject("subject");
+        includedNote.setContent("content");
+
+        assertEquals("subject", includedNote.getSubject());
+        assertEquals("content", includedNote.getContent());
     }
 }
