@@ -18,6 +18,15 @@ public class SellerTradeParty {
 
     }
 
+    public SellerTradeParty(String id, String globalId, String name, String taxRegistration, com.project.group4.models.TradeContact tradeContact, Address address) {
+        this.id = id;
+        this.globalId = globalId;
+        Name = name;
+        TaxRegistration = taxRegistration;
+        TradeContact = tradeContact;
+        this.address = address;
+    }
+
     public String getId() {
         return id;
     }
