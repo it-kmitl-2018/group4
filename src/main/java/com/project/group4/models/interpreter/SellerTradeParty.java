@@ -1,5 +1,10 @@
-package com.project.group4.models;
+package com.project.group4.models.interpreter;
 
+import com.project.group4.models.Address;
+import com.project.group4.models.TradeContact;
+import lombok.Builder;
+
+@Builder
 public class SellerTradeParty {
 
     private String id;
@@ -8,6 +13,10 @@ public class SellerTradeParty {
     private String TaxRegistration;
     private TradeContact TradeContact;
     private Address address;
+
+    public SellerTradeParty() {
+
+    }
 
     public String getId() {
         return id;
