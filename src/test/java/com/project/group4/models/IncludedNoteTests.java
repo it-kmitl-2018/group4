@@ -20,13 +20,13 @@ public class IncludedNoteTests {
     }
 
     @Test
-    public void NullTest() {
+    public void nullTest() {
         assertNull(includedNote.getSubject());
         assertNull(includedNote.getContent());
     }
 
     @Test
-    public void GetterSetterTest() {
+    public void getterSetterTest() {
         includedNote.setSubject("subject");
         includedNote.setContent("content");
 
