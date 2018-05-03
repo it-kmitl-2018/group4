@@ -20,11 +20,11 @@ public class ApplicableTradeDeliveryTermsTests {
     }
 
     @Test
-    public void NullTest() {
+    public void nullTest() {
         assertNull(applicableTradeDeliveryTerms.getDeliveryTypeCode());
     }
     @Test
-    public void GetterSetterTest() {
+    public void getterSetterTest() {
         applicableTradeDeliveryTerms.setDeliveryTypeCode("4324");
 
         assertEquals("4324", applicableTradeDeliveryTerms.getDeliveryTypeCode());
