@@ -1,4 +1,4 @@
-package com.project.group4.models.jsonframe;
+package com.project.group4.models.json;
 
 import org.junit.Test;
 
