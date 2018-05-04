@@ -1,5 +1,7 @@
-package com.project.group4.models;
+package com.project.group4.models.interpreter;
 
+import com.project.group4.models.Address;
+import com.project.group4.models.TradeContact;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,12 +23,12 @@ public class BuyerTradePartyTest {
     }
 
     @Test
-    public void AddressNotNullTest() {
+    public void buyerTradePartyNotNullTest() {
         assertNotNull(buyerTradeParty);
     }
 
     @Test
-    public void NullTest() {
+    public void nullTest() {
         assertNull(buyerTradeParty.getId());
         assertNull(buyerTradeParty.getGlobalId());
         assertNull(buyerTradeParty.getName());
@@ -36,18 +38,18 @@ public class BuyerTradePartyTest {
     }
 
     @Test
-    public void GetterSetterTest() {
+    public void getterSetterTest() {
         buyerTradeParty.setId("1234");
-        buyerTradeParty.setGlobalId("1234");
-        buyerTradeParty.setName("Nameeeee");
-        buyerTradeParty.setTaxId("1234");
+        buyerTradeParty.setGlobalId("global 1234");
+        buyerTradeParty.setName("name");
+        buyerTradeParty.setTaxId("tax id");
         buyerTradeParty.setTradeContact(tradeContact);
         buyerTradeParty.setAddress(address);
 
         assertEquals("1234", buyerTradeParty.getId());
-        assertEquals("1234", buyerTradeParty.getGlobalId());
-        assertEquals("Nameeeee", buyerTradeParty.getName());
-        assertEquals("1234", buyerTradeParty.getTaxId());
+        assertEquals("global 1234", buyerTradeParty.getGlobalId());
+        assertEquals("name", buyerTradeParty.getName());
+        assertEquals("tax id", buyerTradeParty.getTaxId());
         assertEquals(tradeContact, buyerTradeParty.getTradeContact());
         assertEquals(address, buyerTradeParty.getAddress());
     }

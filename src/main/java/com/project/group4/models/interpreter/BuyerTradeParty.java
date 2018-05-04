@@ -1,13 +1,30 @@
-package com.project.group4.models;
+package com.project.group4.models.interpreter;
 
+import com.project.group4.models.Address;
+import com.project.group4.models.TradeContact;
+import lombok.Builder;
+
+@Builder
 public class BuyerTradeParty {
+
     private String id;
     private String globalId;
     private String name;
-    private String taxId;
+    private String taxId; //TaxRegistration
     private TradeContact tradeContact;
     private Address address;
 
+    public BuyerTradeParty(String id, String globalId, String name, String taxId, TradeContact tradeContact, Address address) {
+        this.id = id;
+        this.globalId = globalId;
+        this.name = name;
+        this.taxId = taxId;
+        this.tradeContact = tradeContact;
+        this.address = address;
+    }
+
+    public BuyerTradeParty() {
+    }
 
     public String getId() {
         return id;
