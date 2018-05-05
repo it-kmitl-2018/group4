@@ -1,5 +1,6 @@
 package com.project.group4.models.json;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -15,6 +16,19 @@ public class ExchangedDocumentJsonTest {
     private String globalId;
     private String creationDateTime;
     private IncludedNoteJson includedNoteJson;
+
+    @Before
+    public void setup() {
+        this.id = "testID";
+        this.name = "testName";
+        this.typeCode = "testTypeCode";
+        this.issueDateTime = "testIssueDateTime";
+        this.purpose = "testPurpose";
+        this.purposeCode = "testPurposeCode";
+        this.globalId = "testGlobalID";
+        this.creationDateTime = "testCreationDateTime";
+        this.includedNoteJson = IncludedNoteJson.builder().build();
+    }
 
     @Test
     public void buildTest() {
