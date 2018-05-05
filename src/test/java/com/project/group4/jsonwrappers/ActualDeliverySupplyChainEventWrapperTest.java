@@ -7,16 +7,17 @@ import static junit.framework.TestCase.assertEquals;
 
 public class ActualDeliverySupplyChainEventWrapperTest {
 
+    private String occurrenceDate = "21/11/2561";
     private ActualDeliverySupplyChainEventInterpreter actualDeliverySupplyChainEventInterpreter;
 
     @Test
     public void shouldGetAllInfo(){
         actualDeliverySupplyChainEventInterpreter = ActualDeliverySupplyChainEventInterpreter.builder()
-                .occurrenceDate("21/11/2561")
+                .occurrenceDate(occurrenceDate)
                 .build();
         ActualDeliverySupplyChainEventWrapper actualDeliverySupplyChainEventWrapper =
                 new ActualDeliverySupplyChainEventWrapper(actualDeliverySupplyChainEventInterpreter);
 
-        assertEquals("21/11/2561", actualDeliverySupplyChainEventWrapper.actualDeliverySupplyChainEventInterpreter);
+        assertEquals(this.actualDeliverySupplyChainEventInterpreter, actualDeliverySupplyChainEventWrapper.actualDeliverySupplyChainEventInterpreter);
     }
 }
