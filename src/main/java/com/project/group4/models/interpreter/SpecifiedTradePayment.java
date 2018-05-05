@@ -19,4 +19,3 @@ public class SpecifiedTradePayment {
 
     public SpecifiedTradePayment() {
     }
-}
