@@ -1,4 +1,4 @@
-package com.project.group4.models;
+package com.project.group4.models.interpreter;
 
 import org.junit.Before;
 import org.junit.Test;

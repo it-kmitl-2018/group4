@@ -1,5 +1,6 @@
-package com.project.group4.models;
+package com.project.group4.models.interpreter;
 
+import com.project.group4.models.interpreter.Address;
 import org.junit.Before;
 import org.junit.Test;
 

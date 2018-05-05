@@ -1,7 +1,5 @@
 package com.project.group4.models.interpreter;
 
-import com.project.group4.models.Address;
-import com.project.group4.models.TradeContact;
 import lombok.Builder;
 
 @Builder
@@ -18,7 +16,7 @@ public class SellerTradeParty {
 
     }
 
-    public SellerTradeParty(String id, String globalId, String name, String taxRegistration, com.project.group4.models.TradeContact tradeContact, Address address) {
+    public SellerTradeParty(String id, String globalId, String name, String taxRegistration, com.project.group4.models.interpreter.TradeContact tradeContact, Address address) {
         this.id = id;
         this.globalId = globalId;
         Name = name;
