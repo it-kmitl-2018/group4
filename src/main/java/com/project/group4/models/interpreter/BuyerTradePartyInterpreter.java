@@ -5,12 +5,13 @@ import com.project.group4.models.TradeContact;
 import lombok.Builder;
 import lombok.Data;
 
-public @Data class BuyerTradeParty {
+@Builder
+public @Data class BuyerTradePartyInterpreter {
 
     private String id;
     private String globalId;
     private String name;
-    private String taxId; //TaxRegistration
+    private String taxRegistration;
     private TradeContact tradeContact;
     private Address address;
 }
