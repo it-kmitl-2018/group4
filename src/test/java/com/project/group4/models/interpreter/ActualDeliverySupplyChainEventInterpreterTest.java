@@ -10,7 +10,7 @@ public class ActualDeliverySupplyChainEventInterpreterTest {
     public void shouldReturnInfoTest(){
         ActualDeliverySupplyChainEventInterpreter actualDeliverySupplyChainEventInterpreter =
                 ActualDeliverySupplyChainEventInterpreter.builder()
-                .OccurrenceDate("30/02/59")
+                .occurrenceDate("30/02/59")
                 .build();
         assertEquals("30/02/59", actualDeliverySupplyChainEventInterpreter.getOccurrenceDate());
     }

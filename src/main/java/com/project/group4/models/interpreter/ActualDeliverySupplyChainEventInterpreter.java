@@ -5,5 +5,5 @@ import lombok.Data;
 @Builder
 public @Data class ActualDeliverySupplyChainEventInterpreter {
 
-    private String OccurrenceDate;
+    private String occurrenceDate;
 }
