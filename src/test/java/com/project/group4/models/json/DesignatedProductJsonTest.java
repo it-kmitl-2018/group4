@@ -13,19 +13,19 @@ public class DesignatedProductJsonTest {
 
     @Before
     public void setup() {
-        this.classCode = "testCode";
-        this.className = "testName";
+        classCode = "testCode";
+        className = "testName";
     }
 
     @Test
     public void buildTest() {
         DesignatedProductJson designatedProductJson = DesignatedProductJson.builder()
-                .classCode(this.classCode)
-                .className(this.className)
+                .classCode(classCode)
+                .className(className)
                 .build();
 
-        assertEquals(this.classCode, designatedProductJson.getClassCode());
-        assertEquals(this.className, designatedProductJson.getClassName());
+        assertEquals(classCode, designatedProductJson.getClassCode());
+        assertEquals(className, designatedProductJson.getClassName());
     }
 
     @Test
