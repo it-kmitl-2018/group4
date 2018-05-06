@@ -2,34 +2,35 @@ package com.project.group4.models.json;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
+import lombok.Data;
 
 @Builder
-public class ExchangedDocumentJson {
+public @Data class ExchangedDocumentJson {
 
     @JsonProperty("id")
-    public String id;
+    private String id;
 
     @JsonProperty("name")
-    public String name;
+    private String name;
 
     @JsonProperty("type_code")
-    public String typeCode;
+    private String typeCode;
 
     @JsonProperty("issue_date_time")
-    public String issueDateTime;
+    private String issueDateTime;
 
     @JsonProperty("purpose")
-    public String purpose;
+    private String purpose;
 
     @JsonProperty("purpose_code")
-    public String purposeCode;
+    private String purposeCode;
 
     @JsonProperty("global_id")
-    public String globalId;
+    private String globalId;
 
     @JsonProperty("creation_date_time")
-    public String creationDateTime;
+    private String creationDateTime;
 
     @JsonProperty("included_note")
-    public IncludedNoteJson includedNoteJson;
+    private IncludedNoteJson includedNoteJson;
 }
