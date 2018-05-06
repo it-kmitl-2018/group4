@@ -1,5 +1,6 @@
 package com.project.group4.models.json;
 
+import com.project.group4.converter.JsonConverter;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,7 +24,36 @@ public class DesignatedProductJsonTest {
                 .className(this.className)
                 .build();
 
-        assertEquals(this.classCode, designatedProductJson.classCode);
-        assertEquals(this.className, designatedProductJson.className);
+        assertEquals(this.classCode, designatedProductJson.getClassCode());
+        assertEquals(this.className, designatedProductJson.getClassName());
+    }
+
+    @Test
+    public void jsonStringTest() {
+        DesignatedProductJson designatedProductJson = DesignatedProductJson.builder()
+                .classCode(classCode)
+                .className(className)
+                .build();
+
+        String expectedJson = "{\n" +
+                "    \"class_code\" : \"testCode\",\n" +
+                "    \"class_name\" : \"testName\"\n" +
+                "}";
+        String actualJson = JsonConverter.crateJsonString(designatedProductJson);
+
+        assertEquals(expectedJson, actualJson);
+    }
+
+    @Test
+    public void jsonFileTest() {
+        DesignatedProductJson designatedProductJson = DesignatedProductJson.builder()
+                .classCode(classCode)
+                .className(className)
+                .build();
+
+        Boolean expectedBool = true;
+        Boolean actualBool = JsonConverter.crateJsonFile(designatedProductJson, "test");
+
+        assertEquals(expectedBool, actualBool);
     }
 }

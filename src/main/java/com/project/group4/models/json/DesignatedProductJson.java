@@ -2,13 +2,14 @@ package com.project.group4.models.json;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
+import lombok.Data;
 
 @Builder
-public class DesignatedProductJson {
+public @Data class DesignatedProductJson {
 
     @JsonProperty("class_code")
-    public String classCode;
+    private String classCode;
 
     @JsonProperty("class_name")
-    public String className;
+    private String className;
 }
