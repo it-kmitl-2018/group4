@@ -1,5 +1,6 @@
 package com.project.group4.models.json;
 
+import com.project.group4.converter.JsonConverter;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,18 +13,47 @@ public class IndividualTradeProductJsonTest {
 
     @Before
     public void setup() {
-        this.batchId = "testBatchId";
-        this.expiryDateTime = "testExpiryDateTime";
+        batchId = "testBatchId";
+        expiryDateTime = "testExpiryDateTime";
     }
 
     @Test
     public void buildTest() {
         IndividualTradeProductJson individualTradeProductJson = IndividualTradeProductJson.builder()
-                .batchId(this.batchId)
-                .expiryDateTime(this.expiryDateTime)
+                .batchId(batchId)
+                .expiryDateTime(expiryDateTime)
                 .build();
 
-        assertEquals(this.batchId, individualTradeProductJson.batchId);
-        assertEquals(this.expiryDateTime, individualTradeProductJson.expiryDateTime);
+        assertEquals(batchId, individualTradeProductJson.getBatchId());
+        assertEquals(expiryDateTime, individualTradeProductJson.getExpiryDateTime());
+    }
+
+    @Test
+    public void jsonStringTest() {
+        IndividualTradeProductJson individualTradeProductJson = IndividualTradeProductJson.builder()
+                .batchId(batchId)
+                .expiryDateTime(expiryDateTime)
+                .build();
+
+        String expectedJson = "{\n" +
+                "    \"batch_id\" : \"testBatchId\",\n" +
+                "    \"expiry_date_time\" : \"testExpiryDateTime\"\n" +
+                "}";
+        String actualJson = JsonConverter.crateJsonString(individualTradeProductJson);
+
+        assertEquals(expectedJson, actualJson);
+    }
+
+    @Test
+    public void jsonFileTest() {
+        IndividualTradeProductJson individualTradeProductJson = IndividualTradeProductJson.builder()
+                .batchId(batchId)
+                .expiryDateTime(expiryDateTime)
+                .build();
+
+        Boolean expectedBool = true;
+        Boolean actualBool = JsonConverter.crateJsonFile(individualTradeProductJson, "test");
+
+        assertEquals(expectedBool, actualBool);
     }
 }
