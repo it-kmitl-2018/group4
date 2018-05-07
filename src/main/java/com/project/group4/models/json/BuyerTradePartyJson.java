@@ -11,16 +11,16 @@ public class BuyerTradePartyJson {
     @JsonProperty("id")
     public String id;
 
-    @JsonProperty("globalId")
+    @JsonProperty("global_id")
     public String globalId;
 
     @JsonProperty("name")
     public String name;
 
-    @JsonProperty("taxRegistration")
+    @JsonProperty("tax_registration")
     public String taxRegistration;
 
-    @JsonProperty("tradeContact")
+    @JsonProperty("trade_contact")
     public TradeContact tradeContact;
 
     @JsonProperty("address")
