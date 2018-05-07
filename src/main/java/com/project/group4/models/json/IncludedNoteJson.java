@@ -2,13 +2,14 @@ package com.project.group4.models.json;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
+import lombok.Data;
 
 @Builder
-public class IncludedNoteJson {
+public @Data class IncludedNoteJson {
 
     @JsonProperty("subject")
-    public String subject;
+    private String subject;
 
     @JsonProperty("content")
-    public String content;
+    private String content;
 }
