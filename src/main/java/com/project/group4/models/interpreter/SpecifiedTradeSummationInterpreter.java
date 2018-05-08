@@ -6,12 +6,12 @@ import lombok.Data;
 @Builder
 public @Data class SpecifiedTradeSummationInterpreter {
 
-    private String originalInfoAmount;
-    private String lineTotalAmount;
-    private String differenceSalesInfoAmount;
-    private String allowanceTotalAmount;
-    private String chargeTotalAmount;
-    private String taxBasisTotalAmount;
-    private String taxTotalAmount;
-    private String grandTotalAmount;
+    private Double originalInfoAmount;
+    private Double lineTotalAmount;
+    private Double differenceSalesInfoAmount;
+    private Double allowanceTotalAmount;
+    private Double chargeTotalAmount;
+    private Double taxBasisTotalAmount;
+    private Double taxTotalAmount;
+    private Double grandTotalAmount;
 }
