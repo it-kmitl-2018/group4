@@ -11,57 +11,64 @@ import static org.junit.Assert.assertEquals;
 
 public class BuyerTradePartyJsonTest {
 
-    private String id;
-    private String globalId;
-    private String name;
-    private String taxRegistration;
-    private TradeContact tradeContact;
+    private String taxNumber;
+    private String branchNumber;
+    private String nameEn;
+    private String nameTh;
+    private String email;
+    private String fax;
     private Address address;
 
     @Before
     public void setup(){
-        id = "1234";
-        globalId = "1234";
-        name = "name";
-        taxRegistration = "tax register";
+        taxNumber = "1234";
+        branchNumber = "1234";
+        nameEn = "nameEn";
+        nameTh = "nameTh";
+        email = "1223@123.com";
+        fax = "1234";
     }
 
     @Test
     public void buildTest() {
         BuyerTradePartyJson buyerTradePartyJson = BuyerTradePartyJson.builder()
-                .id(id)
-                .globalId(globalId)
-                .name(name)
-                .taxRegistration(taxRegistration)
-                .tradeContact(tradeContact)
+                .taxNumber(taxNumber)
+                .branchNumber(branchNumber)
+                .nameEn(nameEn)
+                .nameTh(nameTh)
+                .email(email)
+                .fax(fax)
                 .address(address)
                 .build();
 
-        assertEquals(id, buyerTradePartyJson.id);
-        assertEquals(globalId, buyerTradePartyJson.globalId);
-        assertEquals(name, buyerTradePartyJson.name);
-        assertEquals(taxRegistration, buyerTradePartyJson.taxRegistration);
-        assertEquals(tradeContact, buyerTradePartyJson.tradeContact);
+        assertEquals(taxNumber, buyerTradePartyJson.taxNumber);
+        assertEquals(branchNumber, buyerTradePartyJson.branchNumber);
+        assertEquals(nameEn, buyerTradePartyJson.nameEn);
+        assertEquals(nameTh, buyerTradePartyJson.nameTh);
+        assertEquals(email, buyerTradePartyJson.email);
+        assertEquals(fax, buyerTradePartyJson.fax);
         assertEquals(address, buyerTradePartyJson.address);
     }
 
     @Test
     public void jsonStringTest(){
         BuyerTradePartyJson buyerTradePartyJson = BuyerTradePartyJson.builder()
-                .id(id)
-                .globalId(globalId)
-                .name(name)
-                .taxRegistration(taxRegistration)
-                .tradeContact(tradeContact)
+                .taxNumber(taxNumber)
+                .branchNumber(branchNumber)
+                .nameEn(nameEn)
+                .nameTh(nameTh)
+                .email(email)
+                .fax(fax)
                 .address(address)
                 .build();
 
         String expectedJson = "{\n" +
-                "    \"id\" : \"1234\",\n" +
-                "    \"global_id\" : \"1234\",\n" +
-                "    \"name\" : \"name\",\n" +
-                "    \"tax_registration\" : \"tax register\",\n" +
-                "    \"trade_contact\" : null,\n" +
+                "    \"tax_number\" : \"1234\",\n" +
+                "    \"branch_number\" : \"1234\",\n" +
+                "    \"name_en\" : \"nameEn\",\n" +
+                "    \"name_th\" : \"nameTh\",\n" +
+                "    \"email\" : \"1223@123.com\",\n" +
+                "    \"fax\" : \"1234\",\n" +
                 "    \"address\" : null\n" +
                 "}";
         String actualJson = JsonConverter.crateJsonString(buyerTradePartyJson);
@@ -72,13 +79,15 @@ public class BuyerTradePartyJsonTest {
     @Test
     public void jsonFileTest(){
         BuyerTradePartyJson buyerTradePartyJson = BuyerTradePartyJson.builder()
-                .id(id)
-                .globalId(globalId)
-                .name(name)
-                .taxRegistration(taxRegistration)
-                .tradeContact(tradeContact)
+                .taxNumber(taxNumber)
+                .branchNumber(branchNumber)
+                .nameEn(nameEn)
+                .nameTh(nameTh)
+                .email(email)
+                .fax(fax)
                 .address(address)
                 .build();
+
         Boolean expectedBool = true;
         Boolean actualBool = JsonConverter.crateJsonFile(buyerTradePartyJson, "test");
 

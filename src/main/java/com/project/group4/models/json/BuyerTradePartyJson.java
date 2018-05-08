@@ -8,20 +8,23 @@ import lombok.Builder;
 @Builder
 public class BuyerTradePartyJson {
 
-    @JsonProperty("id")
-    public String id;
+    @JsonProperty("tax_number")
+    public String taxNumber;
 
-    @JsonProperty("global_id")
-    public String globalId;
+    @JsonProperty("branch_number")
+    public String branchNumber;
 
-    @JsonProperty("name")
-    public String name;
+    @JsonProperty("name_en")
+    public String nameEn;
 
-    @JsonProperty("tax_registration")
-    public String taxRegistration;
+    @JsonProperty("name_th")
+    public String nameTh;
 
-    @JsonProperty("trade_contact")
-    public TradeContact tradeContact;
+    @JsonProperty("email")
+    public String email;
+
+    @JsonProperty("fax")
+    public String fax;
 
     @JsonProperty("address")
     public Address address;
