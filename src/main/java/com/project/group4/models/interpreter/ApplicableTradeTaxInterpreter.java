@@ -4,8 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 
 @Builder
-@Data
-public class ApplicableTradeTaxInterpreter {
+public @Data class ApplicableTradeTaxInterpreter {
 
     private String typeCode;
     private String calculatedRate;
