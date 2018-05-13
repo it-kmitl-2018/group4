@@ -9,101 +9,65 @@ import static org.junit.Assert.assertEquals;
 public class AddressJsonTest {
 
     private String postcodeCode;
-    private String buildingName;
     private String lineOne;
     private String lineTwo;
-    private String lineThree;
-    private String lineFour;
-    private String lineFive;
-    private String streetName;
     private String cityName;
     private String citySubDivisionName;
-    private String countryId;
-    private String countrySubDivisionId;
+    private String countrySubDivisionName;
     private String buildingNumber;
 
     @Before
     public void setup() {
-        postcodeCode = "postcode";
-        buildingName = "buildingName";
-        lineOne = "lineOne";
-        lineTwo = "lineTwo";
-        lineThree = "lineThree";
-        lineFour = "lineFour";
-        lineFive = "lineFive";
-        streetName = "streetName";
-        cityName = "cityName";
-        citySubDivisionName = "citySubDivisionName";
-        countryId = "countryId";
-        countrySubDivisionId = "countrySubDivisionId";
-        buildingNumber = "buildingNumber";
+        postcodeCode = "10600";
+        lineOne = "สำนักงานใหญ่ เลขที่313/1";
+        lineTwo = "ถนนรัชดาภิเษก แขวงบุคโล เขตธนบุรี กรุงเทพมหานคร 10600";
+        cityName = "ธนบุรี";
+        citySubDivisionName = "บุคโล";
+        countrySubDivisionName = "กรุงเทพมหานคร";
+        buildingNumber = "TH";
     }
 
     @Test
     public void buildTest() {
-        AddressJson addressJson = AddressJson.builder()
-                .postcodeCode(this.postcodeCode)
-                .buildingName(this.buildingName)
+        AddressJson addressJson= AddressJson.builder()
+                .postcode(this.postcodeCode)
                 .lineOne(this.lineOne)
                 .lineTwo(this.lineTwo)
-                .lineThree(this.lineThree)
-                .lineFour(this.lineFour)
-                .lineFive(this.lineFive)
-                .streetName(this.streetName)
                 .cityName(this.cityName)
                 .citySubDivisionName(this.citySubDivisionName)
-                .countryId(this.countryId)
-                .countrySubDivisionId(this.countrySubDivisionId)
+                .countrySubDivisionId(this.countrySubDivisionName)
                 .buildingNumber(this.buildingNumber)
                 .build();
 
-        assertEquals(this.postcodeCode, addressJson.postcodeCode);
-        assertEquals(this.buildingName, addressJson.buildingName);
+        assertEquals(this.postcodeCode, addressJson.postcode);
         assertEquals(this.lineOne, addressJson.lineOne);
         assertEquals(this.lineTwo, addressJson.lineTwo);
-        assertEquals(this.lineThree, addressJson.lineThree);
-        assertEquals(this.lineFour, addressJson.lineFour);
-        assertEquals(this.lineFive, addressJson.lineFive);
-        assertEquals(this.streetName, addressJson.streetName);
         assertEquals(this.cityName, addressJson.cityName);
         assertEquals(this.citySubDivisionName, addressJson.citySubDivisionName);
-        assertEquals(this.countryId, addressJson.countryId);
-        assertEquals(this.countrySubDivisionId, addressJson.countrySubDivisionId);
+        assertEquals(this.countrySubDivisionName, addressJson.countrySubDivisionId);
         assertEquals(this.buildingNumber, addressJson.buildingNumber);
     }
 
     @Test
     public void jsonStringTest() {
         AddressJson addressJson = AddressJson.builder()
-                .postcodeCode(this.postcodeCode)
-                .buildingName(this.buildingName)
+                .postcode(this.postcodeCode)
                 .lineOne(this.lineOne)
                 .lineTwo(this.lineTwo)
-                .lineThree(this.lineThree)
-                .lineFour(this.lineFour)
-                .lineFive(this.lineFive)
-                .streetName(this.streetName)
                 .cityName(this.cityName)
                 .citySubDivisionName(this.citySubDivisionName)
-                .countryId(this.countryId)
-                .countrySubDivisionId(this.countrySubDivisionId)
+                .countrySubDivisionId(this.countrySubDivisionName)
                 .buildingNumber(this.buildingNumber)
                 .build();
 
         String expectedJson = "{\n" +
-                "    \"postcode_code\" : \"postcode\",\n" +
-                "    \"building_name\" : \"buildingName\",\n" +
-                "    \"line_one\" : \"lineOne\",\n" +
-                "    \"line_two\" : \"lineTwo\",\n" +
-                "    \"line_three\" : \"lineThree\",\n" +
-                "    \"line_four\" : \"lineFour\",\n" +
-                "    \"line_five\" : \"lineFive\",\n" +
-                "    \"street_name\" : \"streetName\",\n" +
-                "    \"city_name\" : \"cityName\",\n" +
-                "    \"city_sub_division_name\" : \"citySubDivisionName\",\n" +
-                "    \"country_id\" : \"countryId\",\n" +
-                "    \"country_sub_division_id\" : \"countrySubDivisionId\",\n" +
-                "    \"building_number\" : \"buildingNumber\"\n" +
+                "    \"line_one\" : \"สำนักงานใหญ่ เลขที่313/1\",\n" +
+                "    \"line_two\" : \"ถนนรัชดาภิเษก แขวงบุคโล เขตธนบุรี กรุงเทพมหานคร 10600\",\n" +
+                "    \"city_name\" : \"ธนบุรี\",\n" +
+                "    \"city_sub_division_name\" : \"บุคโล\",\n" +
+                "    \"post_code\" : \"10600\",\n" +
+                "    \"country_sub_division\" : \"กรุงเทพมหานคร\",\n" +
+                "    \"country_name\" : \"TH\"\n" +
                 "}";
         String actualJson = JsonConverter.crateJsonString(addressJson);
 
@@ -113,18 +77,12 @@ public class AddressJsonTest {
     @Test
     public void jsonFileTest() {
         AddressJson addressJson = AddressJson.builder()
-                .postcodeCode(this.postcodeCode)
-                .buildingName(this.buildingName)
+                .postcode(this.postcodeCode)
                 .lineOne(this.lineOne)
                 .lineTwo(this.lineTwo)
-                .lineThree(this.lineThree)
-                .lineFour(this.lineFour)
-                .lineFive(this.lineFive)
-                .streetName(this.streetName)
                 .cityName(this.cityName)
                 .citySubDivisionName(this.citySubDivisionName)
-                .countryId(this.countryId)
-                .countrySubDivisionId(this.countrySubDivisionId)
+                .countrySubDivisionId(this.countrySubDivisionName)
                 .buildingNumber(this.buildingNumber)
                 .build();
 
@@ -132,6 +90,5 @@ public class AddressJsonTest {
         Boolean actualBool = JsonConverter.crateJsonFile(addressJson, "test");
 
         assertEquals(expectedBool, actualBool);
-
     }
 }
