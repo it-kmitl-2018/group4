@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class TradeContactJsonTest {
 
@@ -15,10 +16,10 @@ public class TradeContactJsonTest {
 
     @Before
     public void setup() {
-        personName = "personName";
-        departmentName = "departmentName";
-        uriId = "uriId";
-        telephoneNumber = "telephoneNumber";
+        personName = "ศิริชัย บินชัย";
+        departmentName = "ผู้จัดการฝ่ายการตลาด";
+        uriId = "1101223";
+        telephoneNumber = "0811234321";
     }
 
     @Test
@@ -46,14 +47,13 @@ public class TradeContactJsonTest {
                 .build();
 
         String expectedJson = "{\n" +
-                "    \"person_name\" : \"personName\",\n" +
-                "    \"department_name\" : \"departmentName\",\n" +
-                "    \"uriid\" : \"uriId\",\n" +
-                "    \"complete_number\" : \"telephoneNumber\"\n" +
+                "    \"person_name\" : \"ศิริชัย บินชัย\",\n" +
+                "    \"department_name\" : \"ผู้จัดการฝ่ายการตลาด\",\n" +
+                "    \"uriid\" : \"1101223\",\n" +
+                "    \"complete_number\" : \"0811234321\"\n" +
                 "}";
-        String actualJson = JsonConverter.crateJsonString(tradeContactJson);
 
-        assertEquals(expectedJson, actualJson);
+        assertEquals(expectedJson, JsonConverter.crateJsonString(tradeContactJson));
     }
 
     @Test
@@ -65,9 +65,6 @@ public class TradeContactJsonTest {
                 .telephoneNumber(this.telephoneNumber)
                 .build();
 
-        Boolean expectedBool = true;
-        Boolean actualBool = JsonConverter.crateJsonFile(tradeContactJson, "test");
-
-        assertEquals(expectedBool, actualBool);
+        assertTrue(JsonConverter.crateJsonFile(tradeContactJson, "test"));
     }
 }

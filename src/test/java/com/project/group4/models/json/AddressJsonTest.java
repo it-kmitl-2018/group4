@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class AddressJsonTest {
 
@@ -14,7 +15,7 @@ public class AddressJsonTest {
     private String cityName;
     private String citySubDivisionName;
     private String countrySubDivisionName;
-    private String buildingNumber;
+    private String countryName;
 
     @Before
     public void setup() {
@@ -24,7 +25,7 @@ public class AddressJsonTest {
         cityName = "ธนบุรี";
         citySubDivisionName = "บุคโล";
         countrySubDivisionName = "กรุงเทพมหานคร";
-        buildingNumber = "TH";
+        countryName = "TH";
     }
 
     @Test
@@ -36,7 +37,7 @@ public class AddressJsonTest {
                 .cityName(this.cityName)
                 .citySubDivisionName(this.citySubDivisionName)
                 .countrySubDivisionId(this.countrySubDivisionName)
-                .buildingNumber(this.buildingNumber)
+                .countryName(this.countryName)
                 .build();
 
         assertEquals(this.postcodeCode, addressJson.postcode);
@@ -45,7 +46,7 @@ public class AddressJsonTest {
         assertEquals(this.cityName, addressJson.cityName);
         assertEquals(this.citySubDivisionName, addressJson.citySubDivisionName);
         assertEquals(this.countrySubDivisionName, addressJson.countrySubDivisionId);
-        assertEquals(this.buildingNumber, addressJson.buildingNumber);
+        assertEquals(this.countryName, addressJson.countryName);
     }
 
     @Test
@@ -57,7 +58,7 @@ public class AddressJsonTest {
                 .cityName(this.cityName)
                 .citySubDivisionName(this.citySubDivisionName)
                 .countrySubDivisionId(this.countrySubDivisionName)
-                .buildingNumber(this.buildingNumber)
+                .countryName(this.countryName)
                 .build();
 
         String expectedJson = "{\n" +
@@ -69,9 +70,8 @@ public class AddressJsonTest {
                 "    \"country_sub_division\" : \"กรุงเทพมหานคร\",\n" +
                 "    \"country_name\" : \"TH\"\n" +
                 "}";
-        String actualJson = JsonConverter.crateJsonString(addressJson);
 
-        assertEquals(expectedJson, actualJson);
+        assertEquals(expectedJson, JsonConverter.crateJsonString(addressJson));
     }
 
     @Test
@@ -83,12 +83,9 @@ public class AddressJsonTest {
                 .cityName(this.cityName)
                 .citySubDivisionName(this.citySubDivisionName)
                 .countrySubDivisionId(this.countrySubDivisionName)
-                .buildingNumber(this.buildingNumber)
+                .countryName(this.countryName)
                 .build();
 
-        Boolean expectedBool = true;
-        Boolean actualBool = JsonConverter.crateJsonFile(addressJson, "test");
-
-        assertEquals(expectedBool, actualBool);
+        assertTrue(JsonConverter.crateJsonFile(addressJson, "test"));
     }
 }

@@ -25,5 +25,5 @@ public class AddressJson {
     public String countrySubDivisionId;
 
     @JsonProperty("country_name")
-    public String buildingNumber;
+    public String countryName;
 }
