@@ -1,4 +1,4 @@
-package com.project.group4.models.wrapper;
+package com.project.group4.models.jsonwrapper;
 
 import com.project.group4.converter.JsonConverter;
 import com.project.group4.models.Address;
@@ -11,7 +11,6 @@ public class AddressWrapperTest {
     private String postCode = "10600";
     private String buildingName = "สำนักงานใหญ่";
     private String buildingNumber = "313/1";
-    private String address = "";
     private String alley = "";
     private String village = "";
     private String street = "ถนนรัชดาภิเษก";
@@ -27,7 +26,6 @@ public class AddressWrapperTest {
                 .postCode(this.postCode)
                 .buildingName(this.buildingName)
                 .buildingNumber(this.buildingNumber)
-                .address(this.address)
                 .alley(this.alley)
                 .village(this.village)
                 .street(this.street)
@@ -47,7 +45,6 @@ public class AddressWrapperTest {
                 .postCode(this.postCode)
                 .buildingName(this.buildingName)
                 .buildingNumber(this.buildingNumber)
-                .address(this.address)
                 .alley(this.alley)
                 .village(this.village)
                 .street(this.street)
@@ -57,6 +54,7 @@ public class AddressWrapperTest {
                 .country(this.country)
                 .build();
         AddressWrapper addressWrapper = new AddressWrapper(addressInterpreter);
+
         assertEquals("{\n" +
                 "    \"line_one\" : \"สำนักงานใหญ่ 313/1\",\n" +
                 "    \"line_two\" : \"ถนนรัชดาภิเษก บุคโล ธนบุรี กรุงเทพมหานคร 10600\",\n" +

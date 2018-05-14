@@ -1,4 +1,4 @@
-package com.project.group4.models.wrapper;
+package com.project.group4.models.jsonwrapper;
 
 import com.project.group4.models.Address;
 import com.project.group4.models.json.AddressJson;
