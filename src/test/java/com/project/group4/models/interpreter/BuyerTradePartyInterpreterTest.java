@@ -15,7 +15,7 @@ public class BuyerTradePartyInterpreterTest {
     @Before
     public void setup() {
         TradeContact tradeContact = new TradeContact();
-        Address address = new Address();
+        Address address = Address.builder().build();
     }
 
     @Test

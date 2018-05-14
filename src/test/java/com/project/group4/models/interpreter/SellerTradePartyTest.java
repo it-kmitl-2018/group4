@@ -19,7 +19,7 @@ public class SellerTradePartyTest {
     public void setup() {
         sellerTradeParty = new SellerTradeParty();
         tradeContact = new TradeContact();
-        address = new Address();
+        address = Address.builder().build();
     }
 
     @Test

@@ -1,5 +1,8 @@
 package com.project.group4.models;
 
+import lombok.Builder;
+
+@Builder
 public class Address {
 
     String postCode;

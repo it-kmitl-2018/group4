@@ -13,7 +13,7 @@ public class AddressTest {
 
     @Before
     public void setup() {
-        address = new Address();
+        address = Address.builder().build();
     }
 
     @Test
