@@ -1,7 +1,5 @@
 package com.project.group4.models.interpreter;
 
-import com.project.group4.models.Address;
-import com.project.group4.models.TradeContact;
 import org.junit.Before;
 import org.junit.Test;
 

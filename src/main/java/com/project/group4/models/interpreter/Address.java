@@ -1,18 +1,18 @@
-package com.project.group4.models;
+package com.project.group4.models.interpreter;
 
 public class Address {
 
-    String postCode;
-    String buildingName;
-    String buildingNumber;
-    String address;
-    String alley;
-    String village;
-    String street;
-    String subDistrict;
-    String district;
-    String province;
-    String country;
+    private String postCode;
+    private String buildingName;
+    private String buildingNumber;
+    private String address;
+    private String alley;
+    private String village;
+    private String street;
+    private String subDistrict;
+    private String district;
+    private String province;
+    private String country;
 
     public String getPostCode() {
         return postCode;
