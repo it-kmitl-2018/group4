@@ -10,13 +10,13 @@ public class SellerTradeParty {
     private String Name;
     private String TaxRegistration;
     private TradeContact TradeContact;
-    private Address address;
+    private AddressInterpreter address;
 
     public SellerTradeParty() {
 
     }
 
-    public SellerTradeParty(String id, String globalId, String name, String taxRegistration, com.project.group4.models.interpreter.TradeContact tradeContact, Address address) {
+    public SellerTradeParty(String id, String globalId, String name, String taxRegistration, TradeContact tradeContact, AddressInterpreter address) {
         this.id = id;
         this.globalId = globalId;
         Name = name;
@@ -65,11 +65,11 @@ public class SellerTradeParty {
         TradeContact = tradeContact;
     }
 
-    public Address getAddress() {
+    public AddressInterpreter getAddress() {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(AddressInterpreter address) {
         this.address = address;
     }
 }

@@ -11,13 +11,13 @@ public class SellerTradePartyTest {
 
     private SellerTradeParty sellerTradeParty;
     private TradeContact tradeContact;
-    private Address address;
+    private AddressInterpreter address;
 
     @Before
     public void setup() {
         sellerTradeParty = new SellerTradeParty();
         tradeContact = new TradeContact();
-        address = new Address();
+        address = new AddressInterpreter();
     }
 
     @Test

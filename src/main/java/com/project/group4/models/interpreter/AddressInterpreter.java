@@ -1,6 +1,6 @@
 package com.project.group4.models.interpreter;
 
-public class Address {
+public class AddressInterpreter {
 
     private String postCode;
     private String buildingName;
