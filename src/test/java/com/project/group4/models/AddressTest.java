@@ -13,7 +13,7 @@ public class AddressTest {
 
     @Before
     public void setup() {
-        address = new Address();
+        address = Address.builder().build();
     }
 
     @Test
@@ -26,7 +26,6 @@ public class AddressTest {
         assertNull(address.getPostCode());
         assertNull(address.getBuildingName());
         assertNull(address.getBuildingNumber());
-        assertNull(address.getAddress());
         assertNull(address.getAlley());
         assertNull(address.getVillage());
         assertNull(address.getStreet());
@@ -41,7 +40,6 @@ public class AddressTest {
         address.setPostCode("4324");
         address.setBuildingName("Building name");
         address.setBuildingNumber("23456755");
-        address.setAddress("Address");
         address.setAlley("Alley");
         address.setVillage("Village");
         address.setStreet("Street");
@@ -53,7 +51,6 @@ public class AddressTest {
         assertEquals("4324", address.getPostCode());
         assertEquals("Building name", address.getBuildingName());
         assertEquals("23456755", address.getBuildingNumber());
-        assertEquals("Address", address.getAddress());
         assertEquals("Alley", address.getAlley());
         assertEquals("Village", address.getVillage());
         assertEquals("Street", address.getStreet());

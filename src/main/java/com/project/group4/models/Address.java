@@ -1,11 +1,13 @@
 package com.project.group4.models;
 
+import lombok.Builder;
+
+@Builder
 public class Address {
 
     String postCode;
     String buildingName;
     String buildingNumber;
-    String address;
     String alley;
     String village;
     String street;
@@ -36,14 +38,6 @@ public class Address {
 
     public void setBuildingNumber(String buildingNumber) {
         this.buildingNumber = buildingNumber;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getAlley() {
